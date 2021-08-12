@@ -161,7 +161,8 @@ the relevant ```/etc/sysconfig/network-scripts/ifcfg-``` file.
 
 After checking the interfaces, ensure that the private nic is set in the
 internal firewall zone, and that the public is set in the public
-firewall zone.
+firewall zone. To note, if this process is being done via a Virtual Box,
+by default these two values will be appropraitely assigned.
 
       nmcli connection modify $internal-nic connection.zone internal
       nmcli connection modify $public-nic connection.zone public
